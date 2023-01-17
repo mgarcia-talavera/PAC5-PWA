@@ -1,0 +1,20 @@
+<h1>Imatges</h1>
+<div>
+  <button mat-raised-button routerLink="" class="button1" (click)="Grid()"><img src="../../../assets/icons8-bulleted-list-64.png" width="50%" height="50%" alt="list icon"></button>
+  <button mat-raised-button routerLink="" class="button" (click)="List()"><img src="../../../assets/icons8-grid-2-50.png" width="50%" height="50%" alt="grid icon"></button>
+</div>
+
+<div *ngIf="ShowList">
+<div  *ngFor="let image of images" [routerLink]="['/image', image.id]">
+    <app-card [item]="image"></app-card>
+</div>
+</div>
+ 
+<div *ngIf="ShowGrid">
+    <app-grid [item]="images"></app-grid>
+</div>
+ 
+
+ 
+
+

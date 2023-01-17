@@ -1,0 +1,26 @@
+
+
+<div class="item">
+  <button mat-button routerLink="/" class="button">Back</button>
+</div>
+<mat-accordion *ngIf="image">
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>{{image.author}}</h1>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+        <br>
+        <strong>ID:</strong> {{image.id}}
+        <br>
+        <strong>Size:</strong> {{image.width}} - {{image.height}}
+        <br>
+         <strong>Url:</strong> {{image.url}}
+        <br>
+        <img width="60%" height="60%" src="{{image.download_url}}" alt="">
+        <br>
+    </mat-expansion-panel>
+</mat-accordion>
+<div class="item">
+  <button mat-button class="button" (click)="ShowDetails()">Més detalls</button>
+</div>
